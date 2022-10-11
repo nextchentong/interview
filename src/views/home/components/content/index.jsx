@@ -4,9 +4,9 @@ import style from './index.module.scss'
 export default function Content () {
     const { data, setData } = useContext(Context)
     const [value, setValue] = useState(data.inputText)
-    console.log(data.inputText)
     return <div className={style.root}>
-        {data.inputText}
+        <span>{data.inputText}</span>
+        <span>值:</span>
         <input placeholder={"请输入..."} value={value} onChange={(e) => {
             setValue(e.target.value)
         }} />

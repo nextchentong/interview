@@ -18,7 +18,9 @@ export default function Home () {
                 <Menu />
             </div>
             <div className={style.root}>
-                <Content />
+                {
+                    data.inputText && <Content />
+                }
             </div>
         </div>
     </Context.Provider>
